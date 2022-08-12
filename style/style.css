@@ -98,7 +98,7 @@ li:hover{
     border-radius: 0 30rem 30rem 0;
 }
 
-li:last-child{
+li:first-child{
     color: var(--accent);
 }
 
@@ -136,7 +136,7 @@ li:last-child{
 .asideMenu{
     min-width: 30rem;
     height: 100vh;
-    border-right: 1px solid #3b3b3b;
+   
     transition: var(--transition-03);
 }
 
@@ -151,6 +151,7 @@ li:last-child{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-right: 1px solid #3b3b3b;
 }
 
 .asideTop .asideTopRight{
@@ -184,6 +185,8 @@ li:last-child{
     top: 0;
     left: 0;
     z-index: 9;
+    overflow-y: scroll;
+    border-right: 1px solid #3b3b3b;
 }
 
 .asideBottom .asidBottomeMenu h2{
@@ -207,6 +210,60 @@ li:last-child{
 
 .asideBottom .asidBottomeMenu .spanTxt{
     margin-left: 2rem;
+}
+
+/* Theme Switch */
+.themeSwitch{
+    width: 100%;
+    height: 5.4rem;
+    background-color: var(--second);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #3b3b3b;
+}
+
+/* .themeSwitch  .material-symbols-outlined {
+ margin: 0 2rem;
+} */
+
+.switcher {
+    min-width: 4.4rem;
+    height: 2.4rem;
+    background-color: var(--main);
+    /* background-color: var(--txt); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    padding: .3rem;
+    position: relative;
+    margin: 0 2.2rem;
+    border: 1px solid #3b3b3b;
+}
+
+.switcher input{
+    opacity: 0;
+    width: 100%;
+}
+
+.switcher .slider{
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 10rem;
+    background-color: var(--accent);
+    position: absolute;
+    top: .2rem;
+    right: 0.3rem;
+    transition: var(--transition-015);
+}
+
+.slider-move{
+    transform: translateX(-1.8rem); 
 }
 
 
