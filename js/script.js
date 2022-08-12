@@ -4,14 +4,31 @@ let asideMenu = document.getElementById('asideMenu');
 let switchIcon = document.getElementById('asideMenuIcon');
 let asideBoardsInfo = document.getElementById('asideBoardsInfo');
 
-menuSwitch.addEventListener('click', navToggle);
-
-function navToggle(){
+// ===================================================
+// Aside Menu
+switchIcon.addEventListener('click', () => {
     asideMenu.classList.toggle('closeAsideMenu');
-    switchIcon.classList.toggle('icon-rotate');
     asideBoardsInfo.classList.toggle('h2TextOff');
-}
+    switchIcon.classList.toggle('icon-rotate');
 
+    const menuClosed = document.querySelector('.closeAsideMenu');
+
+    if(menuClosed){
+        localStorage.setItem('closedMenu', 'enabled');
+        localStorage.setItem('textClose', 'enabled');
+    }else{
+        localStorage.setItem('closedMenu', null);
+        localStorage.setItem('textClose', null);
+    }
+})
+
+const storedMenu = localStorage.getItem('closedMenu');
+const storedTxt = localStorage.getItem('textClose');
+
+if(storedMenu === 'enabled' || storedTxt === 'enabled'){
+  asideMenu.classList.add('closeAsideMenu');
+  asideBoardsInfo.classList.add('h2TextOff');
+}
 
 // =====================================================
 // Theme Switch
@@ -22,7 +39,7 @@ slider.addEventListener('click', () => {
     slider.classList.toggle('slider-move');
     bodyId.classList.toggle('lightTheme');
 
- const tema = document.querySelector('.lightTheme')
+    const tema = document.querySelector('.lightTheme')
     if(tema){
         localStorage.setItem('lightTheme', 'enabled');
     }else{
