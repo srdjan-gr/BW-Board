@@ -12,6 +12,7 @@
     --transition-03: all 0.3s ease-in-out;
 
     --border: 1px solid #3b3b3b;
+    --modal: rgba(0,0,0, .5);
 
 }
 
@@ -65,6 +66,21 @@ body{
     font-size: 1.4rem;
     font-weight: bold;
     transition: var(--transition-015);
+}
+
+.btnLong {
+    width: 100%;
+    height: 3.2;
+    font-size: 1.2rem;
+}
+
+.btnWhite {
+    background-color: #ecebe3;
+    color: var(--accent);
+}
+
+.btnWhite:hover{
+    color: var(--txt-different);
 }
 
 .btnBig:hover{
@@ -302,7 +318,122 @@ li:first-child{
 
 }
 
+/* ===================================== */
+/* Modal */
 
+.modal{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background-color: var(--modal);
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--main);
+    width: 42rem;
+    min-height: 70vh;
+    z-index: 12;
+    position: relative;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.cardItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.card h2{
+    font-size: 1.8rem;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.closeBtn:hover{
+    background-color: var(--hover);
+    border-radius: 30rem;
+    padding: .2rem;
+    cursor: pointer;
+}
+
+.cardItems input, textarea, label, select, button {
+    width: 100%;
+    border: var(--border);
+    border-radius: 4px;
+    background-color: var(--main);
+    color: var(--txt-different);
+}
+
+label {
+    border: none;
+    font-size: 1.3rem;
+    margin-bottom: .4rem;
+}
+
+input {
+    width: 100%;
+    height: 3.4rem;
+    padding: .8rem;
+}
+
+.cardItems-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cardItems-input input {
+    width: 90%;
+}
+
+.cardItems-input .material-symbols-outlined{
+
+    color: var(--txt-different);
+
+}
+
+.cardItems-input .material-symbols-outlined:hover{
+    background-color: var(--hover);
+    border-radius: 30rem;
+    padding: .2rem;
+    cursor: pointer;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+select {
+    height: 3.4rem;
+    color: var(--txt-different);
+    padding: .8rem;
+    margin-bottom: 1rem;
+}
+
+textarea{
+    resize: none;
+    padding: .8rem;
+}
 
 
 

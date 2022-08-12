@@ -54,3 +54,22 @@ if(storedTheme === 'enabled'){
     document.body.classList.add('lightTheme');
 }
 
+// =====================================================
+// Modal
+
+let modal = document.getElementById('modal');
+let btnBig = document.getElementById('btnBig');
+let closeBtn = document.getElementById('closeBtn');
+
+btnBig.addEventListener('click', () => {
+    modal.style = `
+        display: flex;
+    `;  
+})
+
+closeBtn.addEventListener('click', () => {
+    modal.style = `
+        display: none;
+    `; 
+})
+

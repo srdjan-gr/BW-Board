@@ -58,14 +58,51 @@
             </header>
 
             <section class="mainSection">
-
-
+              
             </section>
 
         </main>
+
+       
     </div>
     
-
+    <div class="modal" id="modal">
+        <div class="card" id="card">
+            <span class="material-symbols-outlined closeBtn" id="closeBtn">close</span>
+            <h2>Add New Task</h2>
+              <div class="cardItems">
+                <label for="title">Title</label>
+                <input type="text">
+              </div>  
+              <div class="cardItems">
+                <label for="title">Description</label>
+                <textarea name="" id="" cols="30" rows="6"></textarea>
+              </div>  
+              <div class="cardItems">
+                <label for="title">Subtask</label>
+                <div class="cardItems-input" id="newSubtask">
+                    <input type="text">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+                <div class="cardItems-input">
+                    <input type="text">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+                
+                <button class="btnBig btnLong btnWhite">+ Add New Subtask</button>
+              </div> 
+              <div class="cardItems">
+                <label for="title">Status</label>
+                <select name="" id="">
+                    <option value="0">Select Status</option>
+                    <option value="1">Todo</option>
+                    <option value="2">Work</option>
+                    <option value="3">Private</option>
+                </select>
+              </div>
+              <button class="btnBig btnLong">Create Task</button>
+        </div>        
+    </div>
 
 <script src="js/script.js"></script>
 </body>
