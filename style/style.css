@@ -75,7 +75,7 @@ body{
 }
 
 .btnWhite {
-    background-color: #ecebe3;
+    background-color: #e9e8de;
     color: var(--accent);
 }
 
@@ -330,7 +330,6 @@ li:first-child{
     z-index: 11;
     background-color: var(--modal);
     display: none;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -365,12 +364,14 @@ li:first-child{
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
+    color: var(--txt);
+    padding: .4rem;
+    border: var(--border);
+    border-radius: 4px;
 }
 
 .closeBtn:hover{
     background-color: var(--hover);
-    border-radius: 30rem;
-    padding: .2rem;
     cursor: pointer;
 }
 
@@ -379,7 +380,7 @@ li:first-child{
     border: var(--border);
     border-radius: 4px;
     background-color: var(--main);
-    color: var(--txt-different);
+    color: var(--txt);
 }
 
 label {
@@ -407,16 +408,16 @@ input {
 }
 
 .cardItems-input .material-symbols-outlined{
-
-    color: var(--txt-different);
-
+    color: var(--txt);
+    padding: .4rem;
+    border: var(--border);
+    border-radius: 4px;
 }
 
 .cardItems-input .material-symbols-outlined:hover{
     background-color: var(--hover);
-    border-radius: 30rem;
-    padding: .2rem;
     cursor: pointer;
+
 }
 
 input:focus, textarea:focus{
