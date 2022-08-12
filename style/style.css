@@ -47,7 +47,6 @@ body{
     width: 18rem;
     height: 3.6rem;
     padding: .6rem 1rem;
-    /* margin: 0 1rem 0 1rem; */
     border: none;
     border-radius: 30rem;
     cursor: pointer;
@@ -55,17 +54,16 @@ body{
     color: var(--txt);
     font-size: 1.4rem;
     font-weight: bold;
+    transition: all 0.15s ease-in-out;
 }
 
 .btnBig:hover{
-    /* background-color: var(--accent-hover); */
     background-color: #3b3b3b;
 }
 
 .material-symbols-outlined {
     cursor: pointer;
-    padding: .4rem;
-    margin-left: 1.6rem;
+    transition: all 0.15s ease-in-out;
 
     font-variation-settings:
     'FILL' 0,
@@ -101,17 +99,23 @@ li:last-child{
     color: var(--accent);
 }
 
-/* .material-symbols-outlined:hover{
+.headerRight .material-symbols-outlined {
+    padding: .4rem;
+    margin-left: 1.6rem;
+}
+
+.headerRight .material-symbols-outlined:hover {
     background-color: #3b3b3b;
     border-radius: 30rem;
-} */
+}
+
+.asideTopRight .material-symbols-outlined{
+    transition: all 0.3s ease-in-out;
+}
 
 .icon-rotate{
     transform: rotate(180deg);
-}
-
-.icon-custom{
-    margin: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .icon-mg-s{
@@ -121,16 +125,21 @@ li:last-child{
 .icon-custom:hover{
     background-color: #3b3b3b;
     border-radius: 30rem;
+
 }
 
-
+/* ===================================== */
 /* Aside Menu */
 .asideMenu{
-    /* background-color: var(--main); */
-    min-width: 30rem !important;
+    min-width: 30rem;
     height: 100vh;
-    /* padding: 1rem 0 1rem 1rem; */
     border-right: 1px solid #3b3b3b;
+    transition: all 0.3s ease-in-out;
+}
+
+.closeAsideMenu{
+    min-width: 6rem !important;
+    transition: all 0.3s ease-in-out;
 }
 
 .asideTop{
@@ -149,6 +158,7 @@ li:last-child{
     height: 3rem;
     background-color: var(--accent);
     border-radius: 30rem 0 0 30rem;
+    transition: all 0.15s ease-in-out;
 }
 
 .asideTop .asideTopRight:hover{
@@ -156,7 +166,7 @@ li:last-child{
 }
 
 .asideBottom {
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--main);
     height: calc(100vh - 8rem);
     padding: 1rem 0;
@@ -168,10 +178,11 @@ li:last-child{
     margin: 1.4rem 0 1.4rem 2rem;
 }
 
-.asideBottom li span:last-child{
+.asideBottom .spanTxt{
     margin-left: 2rem;
 }
 
+/* ===================================== */
 /* Main section*/
 .main{
     width: 100%;
@@ -212,7 +223,7 @@ li:last-child{
 
 
 
-
+/* ===================================== */
 /* Mobile size styling */
 @media (max-width:768px) {
     .asideMenu{
