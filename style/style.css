@@ -4,17 +4,26 @@
     --main: #2c2c38;
     --second: #242430;
     --txt: #f5f5f5;
+    --txt-different: #f5f5f5;
     --accent: #645fc6;
     --hover: #3b3b3b;
 
     --transition-015: all 0.15s ease-in-out;
     --transition-03: all 0.3s ease-in-out;
+
+    --border: 1px solid #3b3b3b;
+
 }
 
 .lightTheme{
-    --main: #2c2c38;
-    --second: #242430;
-    --txt: #f5f5f5;
+    --main: #f6f7fb;
+    --second: #fff;
+    --txt: #4e4e4e;
+    --txt-different: #f5f5f5;
+
+    --hover: #757575;
+    
+    --border: 1px solid #d8d8d8;
 }
 
 
@@ -52,14 +61,14 @@ body{
     border-radius: 30rem;
     cursor: pointer;
     background-color: var(--accent);
-    color: var(--txt);
+    color: var(--txt-different);
     font-size: 1.4rem;
     font-weight: bold;
     transition: var(--transition-015);
 }
 
 .btnBig:hover{
-    background-color: #3b3b3b;
+    background-color: var(--hover);
 }
 
 .material-symbols-outlined {
@@ -91,6 +100,7 @@ li{
     background-color: var(--accent);
     border-radius: 0 30rem 30rem 0;
     width: 28rem;
+    color: var(--txt-different);
 }
 
 li:hover{
@@ -108,8 +118,9 @@ li:first-child{
 }
 
 .headerRight .material-symbols-outlined:hover {
-    background-color: #3b3b3b;
+    background-color: var(--hover);
     border-radius: 30rem;
+    margin-left: 1.6rem;
 }
 
 .asideTopRight .material-symbols-outlined{
@@ -121,22 +132,11 @@ li:first-child{
     transition: var(--transition-03);
 }
 
-.icon-mg-s{
-    margin-left: 1.6rem;
-}
-
-.icon-custom:hover{
-    background-color: #3b3b3b;
-    border-radius: 30rem;
-
-}
-
 /* ===================================== */
 /* Aside Menu */
 .asideMenu{
     min-width: 30rem;
     height: 100vh;
-   
     transition: var(--transition-03);
 }
 
@@ -151,7 +151,7 @@ li:first-child{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-right: 1px solid #3b3b3b;
+    border-right: var(--border);
 }
 
 .asideTop .asideTopRight{
@@ -163,10 +163,11 @@ li:first-child{
     background-color: var(--accent);
     border-radius: 30rem 0 0 30rem;
     transition: var(--transition-015);
+    color: var(--txt-different);
 }
 
 .asideTop .asideTopRight:hover{
-    background-color: #3b3b3b;
+    background-color: var(--hover);
 }
 
 .asideBottom {
@@ -186,7 +187,7 @@ li:first-child{
     left: 0;
     z-index: 9;
     overflow-y: scroll;
-    border-right: 1px solid #3b3b3b;
+    border-right: var(--border);
 }
 
 .asideBottom .asidBottomeMenu h2{
@@ -198,7 +199,6 @@ li:first-child{
 }
 
 .h2TextOff{
-    /* display: none; */
     transform: translateX(-11.3rem);
     transition: var(--transition-03);
 }
@@ -224,15 +224,11 @@ li:first-child{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid #3b3b3b;
+    border-right: var(--border);
 }
 
-/* .themeSwitch  .material-symbols-outlined {
- margin: 0 2rem;
-} */
-
 .switcher {
-    min-width: 4.4rem;
+    min-width: 3.6rem;
     height: 2.4rem;
     background-color: var(--main);
     /* background-color: var(--txt); */
@@ -243,7 +239,7 @@ li:first-child{
     padding: .3rem;
     position: relative;
     margin: 0 2.2rem;
-    border: 1px solid #3b3b3b;
+    border: var(--border);
 }
 
 .switcher input{
@@ -263,7 +259,7 @@ li:first-child{
 }
 
 .slider-move{
-    transform: translateX(-1.8rem); 
+    transform: translateX(-1rem); 
 }
 
 
@@ -284,7 +280,7 @@ li:first-child{
     background-color: var(--main);
     width: 100%;
     height: 8rem;
-    border-bottom: 1px solid #3b3b3b;
+    border-bottom: var(--border);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -315,5 +311,9 @@ li:first-child{
 @media (max-width:768px) {
     .asideMenu{
         min-width: 6rem !important;
+    }
+
+    .mobileSpanTxt{
+       display: none;
     }
 }
