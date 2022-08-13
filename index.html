@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="style/style.css" >
     <title>BW Board</title>
 </head>
@@ -39,7 +40,7 @@
                     <span class="material-symbols-outlined">sunny</span>
 
                     <div class="switcher" id="switcher">
-                        <input type="checkbox" name="" id="switcher">
+                        <!-- <input type="checkbox" name="" id="switcher"> -->
                         <span class="slider" id="slider"></span>
                     </div>
 
@@ -50,7 +51,11 @@
 
         <main id="main" class="main">
             <header id="header" class="header">
-                <h1> <span class="b">B</span><span class="w">W</span> Board</h1>
+                <!-- <h1> <span class="b">B</span><span class="w">W</span> Board</h1> -->
+
+                <span class="material-symbols-outlined hamburger" id="hamburger">menu</span>
+                <span class="material-symbols-outlined closeHamburger" id="closeHamburger">close</span>
+                <img src="img/BW Board.png" alt="">
                 <div class="headerRight" id="headerRight">
                     <button class="btnBig" id="btnBig">+ Add New Task</button> 
                     <span class="material-symbols-outlined">more_vert</span>
@@ -58,14 +63,111 @@
             </header>
 
             <section class="mainSection">
-              
-            </section>
+            
+                <div class="sectionCategory" id="sectionCategory">
+                    <div class="sectionCategory-header">
+                        <span class="categoryIndicator"></span>
+                        <h2 class="sectionCategory-header">Todo (4)</h2>
+                    </div>
+                    
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                </div>
+                <div class="sectionCategory" id="">
+                    <div class="sectionCategory-header">
+                        <span class="categoryIndicator"></span>
+                        <h2 class="sectionCategory-header">Doing (5)</h2>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
 
-        </main>
+                </div>
+                <div class="sectionCategory" id="">
+                    <div class="sectionCategory-header">
+                        <span class="categoryIndicator"></span>
+                        <h2 class="sectionCategory-header">Done (3)</h2>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                    <div class="taskContainer">
+                        <h2>Izbaci djubre</h2>
+                        <h3>0 of 2 subtask</h3>
+                    </div>
+                </div>
 
        
+ 
+
+                <!-- Add Categorcolumn -->
+                <div class="sectionCategoryAdd" id="addCategory">
+                    <div class="categoryAddContent">
+                        <span class="material-symbols-outlined">add</span>
+                        <h2>Add Column</h2>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
     
+    <!-- Add Task Modal -->
     <div class="modal" id="modal">
         <div class="card" id="card">
             <span class="material-symbols-outlined closeBtn" id="closeBtn">close</span>

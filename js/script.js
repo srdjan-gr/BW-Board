@@ -4,8 +4,6 @@ let asideMenu = document.getElementById('asideMenu');
 let switchIcon = document.getElementById('asideMenuIcon');
 let asideBoardsInfo = document.getElementById('asideBoardsInfo');
 
-// ===================================================
-// Aside Menu
 switchIcon.addEventListener('click', () => {
     asideMenu.classList.toggle('closeAsideMenu');
     asideBoardsInfo.classList.toggle('h2TextOff');
