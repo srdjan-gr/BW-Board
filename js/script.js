@@ -34,6 +34,8 @@ if(storedMenu === 'enabled' || storedTxt === 'enabled'){
 let slider = document.getElementById('slider');
 let bodyId = document.getElementById('bodyThemeSwitch');
 
+let sliderMobile = document.getElementById('sliderMobile');
+
 slider.addEventListener('click', () => {
     slider.classList.toggle('slider-move');
     bodyId.classList.toggle('lightTheme');
@@ -44,7 +46,18 @@ slider.addEventListener('click', () => {
     }else{
         localStorage.setItem('lightTheme', null);
     }
+})
 
+sliderMobile.addEventListener('click', () => {
+    sliderMobile.classList.toggle('slider-move');
+    bodyId.classList.toggle('lightTheme');
+
+    const tema = document.querySelector('.lightTheme')
+    if(tema){
+        localStorage.setItem('lightTheme', 'enabled');
+    }else{
+        localStorage.setItem('lightTheme', null);
+    }
 })
    
 let storedTheme = localStorage.getItem('lightTheme');
@@ -52,6 +65,7 @@ let storedTheme = localStorage.getItem('lightTheme');
 if(storedTheme === 'enabled'){
     document.body.classList.add('lightTheme');
 }
+
 
 // =====================================================
 // Modal
