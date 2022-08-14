@@ -131,6 +131,10 @@ li:first-child{
     color: var(--accent);
 }
 
+.logoMobile{
+    display: none;
+}
+
 .headerRight .material-symbols-outlined {
     padding: .4rem;
     margin-left: 1.6rem;
@@ -314,6 +318,13 @@ li:first-child{
     justify-content: space-between;
 }
 
+.main .header .headerLeft{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 20rem;
+}
+
 .main .header .headerRight{
     display: flex;
     align-items: center;
@@ -418,8 +429,6 @@ li:first-child{
     border-radius: 8px;
     transition: var(--transition-015);
 }
-
-
 
 .categoryAddContent h2{
     font-size: 1.8rem;
@@ -526,7 +535,6 @@ input {
 .cardItems-input .material-symbols-outlined:hover{
     background-color: var(--hover);
     cursor: pointer;
-
 }
 
 input:focus, textarea:focus{
@@ -544,6 +552,83 @@ textarea{
     resize: none;
     padding: .8rem;
 }
+
+/* Mobile Menu */
+.mobileMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal);
+    transform: translateX(-100%);
+    transition: var(--transition-03);
+    opacity: 0;
+    padding: 2rem;
+}
+
+.mobileMenuOpen{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mobileMenuContainer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+    position: relative;
+    border-radius: 8px;
+    opacity: .985;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mobileMenu .mobileMenuContainer .closeMenu{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: .4rem;
+    border: var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mobileMenu .mobileMenuContainer .closeMenu:hover{
+background-color: var(--hover);
+}
+
+.mobileMenuContainerContent{
+    margin-top: 6rem;
+    width: 100%;
+    height: 100%; 
+}
+
+.links{
+    overflow-y: auto;
+    width: 100%;
+    height: 78vh;
+}
+
+.mobileMenuContainerContent h2{
+    font-size: 1.6rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.mobileMenuContainerContent li span{
+    margin-left: 3rem;
+}
+
+
+
+
+
+
+
 
 
 
@@ -572,7 +657,7 @@ textarea{
     }
 }
 
-@media (max-width:920px) {
+@media screen and (max-width:920px) {
     .asideMenu{
         min-width: 6rem !important;
     }
@@ -588,15 +673,23 @@ textarea{
 
 }
 
-@media (max-width:640px) {
+@media screen and (max-width:640px) {
 
     .mainSection{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .logoMobile{
+        display: flex;
+
+    }
+
+    .logoDesktop{
+        display: none;
+    }
 }
 
-@media (max-width:460px) {
+@media screen and (max-width:460px) {
 
     .asideMenu{
         display: none;
@@ -608,5 +701,6 @@ textarea{
 
     .hamburger{
         display: block;
+        margin-right: 2rem;
     }
 }

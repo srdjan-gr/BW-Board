@@ -14,6 +14,7 @@ switchIcon.addEventListener('click', () => {
     if(menuClosed){
         localStorage.setItem('closedMenu', 'enabled');
         localStorage.setItem('textClose', 'enabled');
+
     }else{
         localStorage.setItem('closedMenu', null);
         localStorage.setItem('textClose', null);
@@ -70,4 +71,18 @@ closeBtn.addEventListener('click', () => {
         display: none;
     `; 
 })
+
+// Mobile Menu
+ const mobileMenuContainer = document.getElementById('mobileMenu');
+ const hamburger = document.getElementById('hamburger');
+ const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+ hamburger.addEventListener('click', () => { 
+    mobileMenuContainer.classList.add('mobileMenuOpen'); 
+ })
+
+ closeMobileMenu.addEventListener('click', () => {
+    mobileMenuContainer.classList.remove('mobileMenuOpen'); 
+ })
+
 

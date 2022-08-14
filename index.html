@@ -51,11 +51,13 @@
 
         <main id="main" class="main">
             <header id="header" class="header">
-                <!-- <h1> <span class="b">B</span><span class="w">W</span> Board</h1> -->
-
-                <span class="material-symbols-outlined hamburger" id="hamburger">menu</span>
-                <span class="material-symbols-outlined closeHamburger" id="closeHamburger">close</span>
-                <img src="img/BW Board.png" alt="">
+                <div class="headerLeft">
+                    <span class="material-symbols-outlined hamburger" id="hamburger">menu</span>
+                    <span class="material-symbols-outlined closeHamburger" id="closeHamburger">close</span>
+                    <img class="logoMobile" src="img/BW Board-logo.png" alt="">
+                    <img class="logoDesktop" src="img/BW Board.png" alt=""> 
+                </div>
+                
                 <div class="headerRight" id="headerRight">
                     <button class="btnBig" id="btnBig">+ Add New Task</button> 
                     <span class="material-symbols-outlined">more_vert</span>
@@ -204,6 +206,29 @@
               </div>
               <button class="btnBig btnLong">Create Task</button>
         </div>        
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobileMenu" id="mobileMenu">
+        <div class="mobileMenuContainer">
+            <span class="material-symbols-outlined closeMenu" id="closeMobileMenu">close</span>
+
+            <div class="mobileMenuContainerContent">
+
+                <h2 ><span class="spanTxt" >All Boards</span> <span class="spanTxt">( 8 )</span></h2>
+                <div class="links">
+                    <ul>
+                    <li class="createNewBoardMobile" id="createNewBoardMobile"> <span class="material-symbols-outlined">add</span><span class="spanTxt">Create New Board</span></li>
+    
+                    <li class="li-active"> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
+                    <li> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
+                    <li> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
+                    <li> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
+                </ul> 
+                </div>
+
+            </div>
+        </div>
     </div>
 
 <script src="js/script.js"></script>
