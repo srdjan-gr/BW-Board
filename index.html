@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Default user system settings  -->
+    <meta name="color-scheme" content="dark light">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link rel="icon" href="img/favicon.ico">
+    <!-- <link rel="icon" href="img/favicon.ico"> -->
     <link rel="stylesheet" href="style/style.css" >
     <title>BW Board</title>
 </head>
@@ -27,7 +31,9 @@
                 <div class="asidBottomeMenu">
                     <h2 id="asideBoardsInfo"><span class="spanTxt mobileSpanTxt" >All Boards</span> <span class="spanTxt">( 8 )</span></h2>
                     <ul>
-                        <li class="createNewBoard" id="createNewBoard"> <span class="material-symbols-outlined">add</span><span class="spanTxt">Create New Board</span></li>
+                        <li class="createNewBoard" id="createNewBoard"> <span class="material-symbols-outlined">add</span><span class="spanTxt">Create New Sticky Board</span></li>
+                        <li class="createNewBoardMobile" id="createNewArtBoard"> <span class="material-symbols-outlined">add</span><span class="spanTxt">Create New Art Board</span></li>
+                        <div class="devider"></div>
 
                         <li class="li-active"> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
                         <li> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
@@ -72,7 +78,7 @@
                         <h2 class="sectionCategory-header">Todo (4)</h2>
                     </div>
                     
-                    <div class="taskContainer">
+                    <div class="taskContainer" id="firstTask">
                         <h2>Izbaci djubre</h2>
                         <h3>0 of 2 subtask</h3>
                     </div>
@@ -208,6 +214,84 @@
         </div>        
     </div>
 
+    <!-- Single task modal -->
+    <div class="modal" id="singleTaskModal">
+        <div class="cardSingleTask" id="card">
+            <span class="material-symbols-outlined closeBtn" id="closeBtnSingleTask">close</span>
+            <!-- Single Task Description -->
+            <h3>Ovo je naslov taska koji se vidi u dashbordu a kada se otvori single tyask on moze da bude i u vise redova.</h3>
+           
+            <div class="cardItems">
+                <p>
+                    Opis jednog taksa koji je unek kada se task pravio. Treba da ima onoliko redo0va koliko je upisano. Svi treba da su vidljivi.
+                </p>
+            </div>  
+
+            <div class="cardItems">
+                <label for="title">Subtask (2 of 3)</label>
+
+                <!-- Subtaskks container -->
+                <div class="single--items">
+                    <div class="single--items__container" id="task1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+                    <div class="single--items__container" id="1">
+                        <input class="check" type="checkbox" name="myCheckbox">
+                        <p class="pTxt" >Ovo je prvi podtask glavnog taska. </p>
+                    </div>
+
+
+
+                    
+                    
+                </div>
+            </div> 
+
+            <div class="cardItems">
+                <label for="title">Status</label>
+                <select name="" id="">
+                    <option value="0">Select Status</option>
+                    <option value="1">Todo</option>
+                    <option value="2">Work</option>
+                    <option value="3">Private</option>
+                </select>
+            </div>
+        </div>        
+    </div>
+
     <!-- Mobile Menu -->
     <div class="mobileMenu" id="mobileMenu">
         <div class="mobileMenuContainer">
@@ -219,11 +303,15 @@
                 <div class="links">
                     <ul>
                         <li class="createNewBoardMobile" id="createNewBoardMobile"> <span class="material-symbols-outlined">add</span><span class="spanTxt">Create New Board</span></li>
-        
+                        <li class="createNewBoardMobile" id="createNewBoardMobile"> <span class="material-symbols-outlined">add</span><span class="spanTxt">Create New Art Board</span></li>
+                        <div class="devider"></div>
+
                         <li class="li-active"> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
                         <li> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
                         <li> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
                         <li> <span class="material-symbols-outlined">team_dashboard</span><span class="spanTxt">Todo Board</span></li>
+    
+
                     </ul> 
                 </div>
 
@@ -235,7 +323,6 @@
                     <span class="material-symbols-outlined">clear_night</span>
                 </div>
             </div>
-      
         </div>
 
         

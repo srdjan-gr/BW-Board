@@ -70,22 +70,38 @@ if(storedTheme === 'enabled'){
 // =====================================================
 // Modal
 
+// Add New Task modal
 let modal = document.getElementById('modal');
 let btnBig = document.getElementById('btnBig');
 let closeBtn = document.getElementById('closeBtn');
 
-btnBig.addEventListener('click', () => {
-    modal.style = `
-        display: flex;
-    `;  
-})
+// Single task modal
+const closeBtnSingleTask = document.getElementById('closeBtnSingleTask');
+const singleTaskModal = document.getElementById('singleTaskModal');
 
-closeBtn.addEventListener('click', () => {
-    modal.style = `
-        display: none;
-    `; 
-})
+// Ovaj ID mora da bude dinamicki iz baze
+const singleTask = document.getElementById('firstTask');
 
+
+btnBig.addEventListener('click', () => { 
+    modal.classList.add('modalTaskOpen'); 
+ })
+
+ closeBtn.addEventListener('click', () => {
+    modal.classList.remove('modalTaskOpen'); 
+ })
+
+ singleTask.addEventListener('click', () => { 
+    singleTaskModal.classList.add('modalTaskOpen'); 
+ })
+
+ closeBtnSingleTask.addEventListener('click', () => {
+    singleTaskModal.classList.remove('modalTaskOpen'); 
+ })
+
+
+
+// =====================================================
 // Mobile Menu
  const mobileMenuContainer = document.getElementById('mobileMenu');
  const hamburger = document.getElementById('hamburger');
@@ -100,3 +116,28 @@ closeBtn.addEventListener('click', () => {
  })
 
 
+
+// =====================================================
+// Single task
+
+let pTxt = document.querySelector('pTxt');
+
+// selector.addEventListener('change', () => {
+    
+//     if (this.checked) {
+//         pTxt.classList.add('taskDone');
+//     } else {
+//         pTxt.classList.remove('taskDone');
+//     }
+
+// });
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     var _selector = document.querySelector('input[name=myCheckbox]');
+//     _selector.addEventListener('change', function (event) {
+//         if (_selector.checked) {
+//             pTxt.classList.add('taskDone');
+//         } else {
+//             pTxt.classList.remove('taskDone');
+//         }
+//     });
+// });
